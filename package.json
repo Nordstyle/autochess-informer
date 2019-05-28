@@ -1,0 +1,34 @@
+{
+  "name": "AutoChess Informer",
+  "version": "1.0.1",
+  "description": "custom game informer",
+  "main": "index.js",
+  "author": "Zolotukhin Anatoliy",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "3.9.3",
+    "@material-ui/icons": "latest",
+    "classnames": "latest",
+    "jss": "latest",
+    "next": "^8.1.0",
+    "prop-types": "latest",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-jss": "^8.1.0",
+    "react-redux": "^5.0.1",
+    "recompose": "latest",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.1.0",
+    "styled-components": "^4.2.0",
+    "styled-jsx": "latest"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
