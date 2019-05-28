@@ -9,7 +9,7 @@ export default {
   },
   primary: {
     contrastText: white,
-    main: '#0767DB',
+    main: '#0087CF',
     light: '#F6F9FD',
     dark: '#0B48A0'
   },
