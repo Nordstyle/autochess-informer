@@ -9,32 +9,9 @@ import Paper from '@material-ui/core/Paper';
 
 import { CustomTableCell, styles } from './styles';
 
-let id = 0;
-function createData(name, calories, fat, carbs, protein) {
-  id += 1;
-  return { id, name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3)
-];
-
 function CustomizedTable(props) {
-  const { classes } = props;
-
+  const { classes, figures } = props;
+  console.log(figures, 'props table');
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -56,15 +33,22 @@ function CustomizedTable(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <TableRow className={classes.row} key={row.id}>
-              <CustomTableCell>{row.name}</CustomTableCell>
-              <CustomTableCell>{row.calories}</CustomTableCell>
-              <CustomTableCell>{row.fat}</CustomTableCell>
-              <CustomTableCell>{row.carbs}</CustomTableCell>
-              <CustomTableCell>{row.protein}</CustomTableCell>
+          { figures && Object.keys(figures).map((race, idx) => {
+            const cRace = figures[Object.keys(figures)[idx]];
+            return (
+            <TableRow key={race}>
+              <CustomTableCell>{race.charAt(0).toUpperCase() + race.slice(1) + 's'}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'assasin' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'warrior' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'warlock' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'mage' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'knight' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'hunter' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'druid' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'mechanism' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'demon hunter' ? <div>{figure.name}</div> : null)}</CustomTableCell>
             </TableRow>
-          ))}
+          )})}
         </TableBody>
       </Table>
     </Paper>
