@@ -8,10 +8,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 import { CustomTableCell, styles } from './styles';
+import TableIcon from '../TableIcon';
 
 function CustomizedTable(props) {
   const { classes, figures } = props;
-  console.log(figures, 'props table');
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -38,15 +38,15 @@ function CustomizedTable(props) {
             return (
             <TableRow key={race}>
               <CustomTableCell>{race.charAt(0).toUpperCase() + race.slice(1) + 's'}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'assasin' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'warrior' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'warlock' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'mage' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'knight' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'hunter' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'druid' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'mechanism' ? <div>{figure.name}</div> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === 'demon hunter' ? <div>{figure.name}</div> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'assasin' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'warrior' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'warlock' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'mage' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'knight' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'hunter' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'druid' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'mechanism' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === 'demon hunter' ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
             </TableRow>
           )})}
         </TableBody>
