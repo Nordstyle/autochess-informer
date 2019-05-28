@@ -19,6 +19,7 @@ export const CustomTableCell = withStyles(theme => ({
     border: '1px solid #DFE3E8',
     '&:first-child': {
       textAlign: 'left',
+      fontSize: 16,
       backgroundColor: 'rgba(0,0,0,0.6)',
       color: theme.palette.common.white
     }
