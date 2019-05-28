@@ -6,7 +6,12 @@ import { data } from './data';
 
 const initialStateApp = data;
 
-export const reducer = (state = initialStateApp, action) => {};
+export const reducer = (state = initialStateApp, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
 
 export function initializeStore (initialState = initialStateApp) {
   return createStore(
