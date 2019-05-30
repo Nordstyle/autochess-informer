@@ -2,6 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
 
+import TooltipWrapp from '../Tooltip';
+import FigureDetail from '../FigureDetail';
+
 const takeColor = (cost) => {
   switch(cost) {
     case 1: return '#999999';
@@ -17,9 +20,11 @@ const TableIcon = (props) => {
   const { classes } = props;
   const { icon, name, cost } = props.figure;
   return (
-    <span className={classes.imgWrapper} style={{ backgroundColor: takeColor(cost) }}>
-      <img src={icon} alt={'Фигура Dota AutoChess | ' + name} />
-    </span>
+    <TooltipWrapp figure={props.figure} TooltipContent={FigureDetail}>
+      <span className={classes.imgWrapper} style={{ backgroundColor: takeColor(cost) }}>
+        <img src={icon} alt={'Фигура Dota AutoChess | ' + name} />
+      </span>
+    </TooltipWrapp>
   );
 };
 

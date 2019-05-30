@@ -4,14 +4,13 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import { styles } from './styles';
 
-const FigureTooltip = (props) => {
-  console.log(props, 'props');
-  const { classes } = props;
+const TooltipWrapp = (props) => {
   const [arrowRef, handleArrowRef] = useState(null);
+  const { classes, TooltipContent, figure } = props;
   return (
     <Tooltip title={
       <>
-        HELLO
+        <TooltipContent figure={figure}/>
         <span className={classes.arrow} ref={handleArrowRef}/>
       </>
     }
@@ -35,9 +34,11 @@ const FigureTooltip = (props) => {
     }}
     interactive
     >
-      <div className={classes.tooltipWrap}> {props.children} </div>
+      <div className={classes.tooltipWrap}> 
+        {props.children} 
+      </div>
     </Tooltip>
   );
 };
 
-export default withStyles(styles)(FigureTooltip);
+export default withStyles(styles)(TooltipWrapp);
