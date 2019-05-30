@@ -40,15 +40,15 @@ function CustomizedTable(props) {
             return (
             <TableRow key={race}>
               <CustomTableCell>{race.charAt(0).toUpperCase() + race.slice(1) + 's'}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.ASSASIN ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARRIOR ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARLOCK ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MAGE ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.KNIGHT ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.HUNTER ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DRUID ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MECHANISM ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DEMON_HUNTER ? <TableIcon icon={figure.icon} name={figure.name} cost={figure.cost} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.ASSASIN ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARRIOR ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARLOCK ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MAGE ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.KNIGHT ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.HUNTER ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DRUID ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MECHANISM ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DEMON_HUNTER ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
             </TableRow>
           )})}
         </TableBody>

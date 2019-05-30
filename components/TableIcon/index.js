@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-
 import { styles } from './styles';
 
 const takeColor = (cost) => {
@@ -15,7 +14,8 @@ const takeColor = (cost) => {
 };
 
 const TableIcon = (props) => {
-  const { icon, name, cost, classes } = props;
+  const { classes } = props;
+  const { icon, name, cost } = props.figure;
   return (
     <span className={classes.imgWrapper} style={{ backgroundColor: takeColor(cost) }}>
       <img src={icon} alt={'Фигура Dota AutoChess | ' + name} />
