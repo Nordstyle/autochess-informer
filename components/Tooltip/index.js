@@ -33,6 +33,10 @@ const TooltipWrapp = (props) => {
       }
     }}
     interactive
+    open={() => true}
+    disableFocusListener
+    disableHoverListener
+    disableTouchListener
     >
       <div className={classes.tooltipWrap}> 
         {props.children} 

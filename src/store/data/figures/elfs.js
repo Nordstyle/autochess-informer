@@ -27,6 +27,15 @@ export const elfs = [
     as: '1.3',
     dps: ['42', '84', '169'],
     armor: ['5', '5', '5'],
-    mr: ['0', '0', '0']
+    mr: ['0', '0', '0'],
+    skill: {
+      name: 'Moon Glaives',
+      description: `Empowers Luna's Glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.`,
+      ability: `ABILITY: Passive /
+      PIERCES SPELL IMMUNITY: Yes /
+      BOUNCERADIUS: 500 / 
+      BOUNCES: 3/5/7 / 
+      DAMAGE REDUCTION PER BOUNCE: 30%`
+    }
   }
 ];

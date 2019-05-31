@@ -8,6 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 import { CLASS } from '../../src/constants';
+import { capitalize } from '../../src/utils';
 
 import { CustomTableCell, styles } from './styles';
 import TableIcon from '../TableIcon';
@@ -39,7 +40,7 @@ function CustomizedTable(props) {
             const cRace = figures[Object.keys(figures)[idx]];
             return (
             <TableRow key={race}>
-              <CustomTableCell>{race.charAt(0).toUpperCase() + race.slice(1) + 's'}</CustomTableCell>
+              <CustomTableCell>{capitalize(race) + 's'}</CustomTableCell>
               <CustomTableCell>{cRace.map(figure => figure.class === CLASS.ASSASIN ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
               <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARRIOR ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
               <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARLOCK ? <TableIcon figure={figure} /> : null)}</CustomTableCell>

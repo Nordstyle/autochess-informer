@@ -61,6 +61,7 @@ export const styles = theme => ({
   Popper: arrowGenerator(theme.palette.common.black),
   Tooltip: {
     backgroundColor: theme.palette.common.black,
+    maxWidth: 'none'  
   },
   PlacementLeft: {
     margin: '0 8px',
