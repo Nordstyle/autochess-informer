@@ -12,7 +12,16 @@ export const elfs = [
     as: '1.2',
     dps: ['41', '83', '167'],
     armor: ['5', '5', '5'],
-    mr: ['10', '20', '30']
+    mr: ['10', '20', '30'],
+    skill: {
+      name: 'Mana Break',
+      icon: '/static/images/skills/skill_antimage.png',
+      description: `Burns an opponent's mana on each attack. Mana Break deals 50% of the mana burned as damage to the target.`,
+      ability: `ABILITY: Passive .
+      DAMAGE TYPE: Physical .
+      PIERCES SPELL IMMUNITY: No .
+      MANA BURNED PER HIT: 30 / 60 / 90`
+    }
   },
   {
     id: 2,
@@ -31,10 +40,10 @@ export const elfs = [
     skill: {
       name: 'Moon Glaives',
       description: `Empowers Luna's Glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.`,
-      ability: `ABILITY: Passive /
-      PIERCES SPELL IMMUNITY: Yes /
-      BOUNCERADIUS: 500 / 
-      BOUNCES: 3/5/7 / 
+      ability: `ABILITY: Passive .
+      PIERCES SPELL IMMUNITY: Yes .
+      BOUNCERADIUS: 500 .
+      BOUNCES: 3/5/7 .
       DAMAGE REDUCTION PER BOUNCE: 30%`
     }
   }

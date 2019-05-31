@@ -8,7 +8,7 @@ const TooltipWrapp = (props) => {
   const [arrowRef, handleArrowRef] = useState(null);
   const { classes, TooltipContent, figure } = props;
   return (
-    <Tooltip title={
+    <Tooltip {...props} title={
       <>
         <TooltipContent figure={figure}/>
         <span className={classes.arrow} ref={handleArrowRef}/>
@@ -32,11 +32,11 @@ const TooltipWrapp = (props) => {
         }
       }
     }}
+     // open={() => true}
+     // disableFocusListener
+     // disableHoverListener
+     // disableTouchListener
     interactive
-    open={() => true}
-    disableFocusListener
-    disableHoverListener
-    disableTouchListener
     >
       <div className={classes.tooltipWrap}> 
         {props.children} 

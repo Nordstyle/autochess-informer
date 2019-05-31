@@ -7,13 +7,17 @@ export const styles = theme => ({
   },
   supImages: {
     width: '44px',
-    heihgt: '44x',
+    objectFit: 'cover'
+  },
+  skill: {
+    width: '40px',
     objectFit: 'cover'
   },
   flexBox: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: '2px'
   },
   figureBlock: {
     width: '100%',
