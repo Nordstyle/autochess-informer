@@ -6,11 +6,11 @@ import { styles } from './styles';
 
 const TooltipWrapp = (props) => {
   const [arrowRef, handleArrowRef] = useState(null);
-  const { classes, TooltipContent, figure } = props;
+  const { classes, TooltipContent, figure, races } = props;
   return (
     <Tooltip {...props} title={
       <>
-        <TooltipContent figure={figure}/>
+        <TooltipContent figure={figure} races={races}/>
         <span className={classes.arrow} ref={handleArrowRef}/>
       </>
     }

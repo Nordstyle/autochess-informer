@@ -14,7 +14,7 @@ import { CustomTableCell, styles } from './styles';
 import TableIcon from '../TableIcon';
 
 function CustomizedTable(props) {
-  const { classes, figures } = props;
+  const { classes, figures, races } = props;
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -41,15 +41,15 @@ function CustomizedTable(props) {
             return (
             <TableRow key={race}>
               <CustomTableCell>{capitalize(race) + 's'}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.ASSASIN ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARRIOR ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARLOCK ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MAGE ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.KNIGHT ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.HUNTER ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DRUID ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MECHANISM ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
-              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DEMON_HUNTER ? <TableIcon figure={figure} /> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.ASSASIN ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARRIOR ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.WARLOCK ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MAGE ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.KNIGHT ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.HUNTER ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DRUID ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.MECHANISM ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
+              <CustomTableCell>{cRace.map(figure => figure.class === CLASS.DEMON_HUNTER ? <TableIcon key={figure.name} figure={figure} races={races}/> : null)}</CustomTableCell>
             </TableRow>
           )})}
         </TableBody>

@@ -7,6 +7,18 @@ export const takeRareColor = (cost) => {
     case 5: return '#ff6600';
     default: return 'transparent';
   }
-}
+};
 
 export const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
+export const matchRaces = (heroRaces, allRaces) => {
+  const raceArr = [];
+  allRaces.forEach(aRace => {
+    heroRaces.forEach(hRace => {
+      if (aRace.name === hRace) {
+        raceArr.push(aRace);
+      }
+    })
+  });
+  return raceArr;
+};

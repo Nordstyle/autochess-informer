@@ -39,6 +39,7 @@ export const elfs = [
     mr: ['0', '0', '0'],
     skill: {
       name: 'Moon Glaives',
+      icon: '/static/images/skills/skill_luna.png',
       description: `Empowers Luna's Glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.`,
       ability: `ABILITY: Passive .
       PIERCES SPELL IMMUNITY: Yes .

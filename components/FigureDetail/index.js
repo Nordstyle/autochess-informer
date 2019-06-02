@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { takeRareColor, capitalize } from '../../src/utils';
+import { takeRareColor, capitalize, matchRaces } from '../../src/utils';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -11,18 +11,29 @@ import { styles } from './styles';
 const arrLvlSeparate = (arr) => arr.join(' / ');
 
 const FigureDetail = (props) => {
-  const { classes } = props;
+  const { classes, races } = props;
   const { name, avatar, race, cost, health, damage, as, dps, armor, mr, skill } = props.figure;
+  const matchedRaces = matchRaces(race, races);
   return (
     <Grid item xs={12} className={classes.figureBlock}>
       <Grid item className={classes.figureBlock}>
         <Grid item className={classes.imagesWrapper}>
           <img src={avatar} className={classes.avatar}/>
           <Grid item className={classes.flexBox}>
-            <img src='/static/images/race/human.png' className={classes.supImages}/>
-            <img src='/static/images/class/demon-hunter.png' className={classes.supImages}/>
+            {matchedRaces && matchedRaces.map(race => (
+              <Tooltip key={race.id} disableFocusListener disableTouchListener title={
+                <>
+                  <Typography variant='body1' style={{color: 'white'}}>{capitalize(race.name) + 's'}</Typography>
+                  <Typography variant='body2' style={{color: 'white'}}>{race.description}</Typography>
+                  <Typography variant='body2' style={{color: 'white'}}>
+                    <span dangerouslySetInnerHTML={{ __html: race.effect.description.replace(/\%/g, '<br/>') }}/>
+                  </Typography>
+                </>
+              }>
+                <img src={race.icon} className={classes.supImages} alt={'Dota AutoChess Species ' + race.name}/>
+              </Tooltip>
+            ))}
           </Grid>
-
         </Grid>
         <Grid item>
           <Grid item className={classes.flexBox}>
@@ -36,7 +47,7 @@ const FigureDetail = (props) => {
                   </Typography>
                 </>
               }>
-                <img src={skill.icon} className={classes.skill}/>
+                <img src={skill.icon} className={classes.skill} alt={'Dota AutoChess skill ' + classes.skill.name}/>
               </Tooltip>
             )}
           </Grid>
