@@ -20,7 +20,7 @@ const FigureDetail = (props) => {
       <Grid item className={classes.figureBlock}>
         <Grid item className={classes.imagesWrapper}>
           <img src={avatar} className={classes.avatar}/>
-          <Grid item className={classes.flexBox}>
+          <Grid item className={classes.imagesBlock}>
             {matchedRaces && matchedRaces.map(race => (
               <Tooltip key={race.id} disableFocusListener disableTouchListener title={
                 <>

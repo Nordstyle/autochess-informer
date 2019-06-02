@@ -1,10 +1,10 @@
 export const takeRareColor = (cost) => {
   switch(cost) {
-    case 1: return '#999999';
-    case 2: return '#00ccff';
-    case 3: return '#0087CF';
-    case 4: return '#800080';
-    case 5: return '#ff6600';
+    case 1: return '#B2B2B2';
+    case 2: return '#5e98d9';
+    case 3: return '#4b69ff';
+    case 4: return '#d32ce6';
+    case 5: return '#FF7D0A';
     default: return 'transparent';
   }
 };

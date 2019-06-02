@@ -21,8 +21,8 @@ function CustomizedTable(props) {
         <TableHead>
           <TableRow>
             <CustomTableCell>
-              <div className={classes.alignRight}>Class</div>
-              <div className={classes.alignLeft}>Race</div>
+              <div className={classes.alignRight}>Classes</div>
+              <div className={classes.alignLeft}>Species</div>
             </CustomTableCell>
             <CustomTableCell>Assassins</CustomTableCell>
             <CustomTableCell>Warriors</CustomTableCell>
