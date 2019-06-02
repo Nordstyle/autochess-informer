@@ -1,7 +1,8 @@
 import { createSelector } from 'reselect';
 
 export const getRaces = store => store.races;
-const getFiguresSelector = store => store.figures;   
+export const getClasses = store => store.classes;
+const getFiguresSelector = store => store.figures;
 
 export const getFigures = createSelector(
   getFiguresSelector,

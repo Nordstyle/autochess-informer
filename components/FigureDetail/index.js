@@ -11,9 +11,10 @@ import { styles } from './styles';
 const arrLvlSeparate = (arr) => arr.join(' / ');
 
 const FigureDetail = (props) => {
-  const { classes, races } = props;
+  const { classes, races, classesFigures } = props;
   const { name, avatar, race, cost, health, damage, as, dps, armor, mr, skill } = props.figure;
   const matchedRaces = matchRaces(race, races);
+  const classFigure = classesFigures.find(cFigure => cFigure.name === props.figure.class);
   return (
     <Grid item xs={12} className={classes.figureBlock}>
       <Grid item className={classes.figureBlock}>
@@ -25,6 +26,8 @@ const FigureDetail = (props) => {
                 <>
                   <Typography variant='body1' style={{color: 'white'}}>{capitalize(race.name) + 's'}</Typography>
                   <Typography variant='body2' style={{color: 'white'}}>{race.description}</Typography>
+                  <br/>
+                  <Typography variant='body1' style={{color: 'white'}}>{race.effect.name}</Typography>
                   <Typography variant='body2' style={{color: 'white'}}>
                     <span dangerouslySetInnerHTML={{ __html: race.effect.description.replace(/\%/g, '<br/>') }}/>
                   </Typography>
@@ -33,6 +36,21 @@ const FigureDetail = (props) => {
                 <img src={race.icon} className={classes.supImages} alt={'Dota AutoChess Species ' + race.name}/>
               </Tooltip>
             ))}
+            {classFigure && (
+              <Tooltip disableFocusListener disableTouchListener title={
+                <>
+                  <Typography variant='body1' style={{color: 'white'}}>{capitalize(classFigure.name) + 's'}</Typography>
+                  <Typography variant='body2' style={{color: 'white'}}>{classFigure.description}</Typography>
+                  <br/>
+                  <Typography variant='body1' style={{color: 'white'}}>{classFigure.effect.name}</Typography>
+                  <Typography variant='body2' style={{color: 'white'}}>
+                    <span dangerouslySetInnerHTML={{ __html: classFigure.effect.description.replace(/\%/g, '<br/>') }}/>
+                  </Typography>
+                </>
+              }>
+                <img src={classFigure.icon} className={classes.supImages} alt={'Dota AutoChess Classes ' + classFigure.name}/>
+              </Tooltip>
+            )}
           </Grid>
         </Grid>
         <Grid item>
