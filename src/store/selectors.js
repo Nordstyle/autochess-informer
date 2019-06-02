@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 
+export const getRaces = store => store.races;
 const getFiguresSelector = store => store.figures;   
 
 export const getFigures = createSelector(
@@ -9,7 +10,7 @@ export const getFigures = createSelector(
       const cRace = race || 'undefined';
       if (!a[cRace]) a[cRace] = [];
       a[cRace].push(c);
-    })
+    });
     return a;
   }, {})
 );
