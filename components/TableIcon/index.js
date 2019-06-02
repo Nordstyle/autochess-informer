@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Link from 'next/link';
 import { styles } from './styles';
 import { takeRareColor } from '../../src/utils';
 
@@ -10,11 +11,13 @@ const TableIcon = (props) => {
   const { classes, races, classesFigures } = props;
   const { icon, name, cost } = props.figure;
   return (
-    <TooltipWrapp figure={props.figure} races={races} TooltipContent={FigureDetail} classesFigures={classesFigures}>
+    <Link as={`/figure/${name}`} href={`/figure?name=${name}`}>
+      <TooltipWrapp figure={props.figure} races={races} TooltipContent={FigureDetail} classesFigures={classesFigures}>
       <span className={classes.imgWrapper} style={{ backgroundColor: takeRareColor(cost) }}>
         <img src={icon} alt={'Hero Dota AutoChess ' + name} />
       </span>
-    </TooltipWrapp>
+      </TooltipWrapp>
+    </Link>
   );
 };
 
