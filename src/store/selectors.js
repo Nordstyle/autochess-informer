@@ -2,9 +2,9 @@ import { createSelector } from 'reselect';
 
 export const getRaces = store => store.races;
 export const getClasses = store => store.classes;
-const getFiguresSelector = store => store.figures;
+export const getFiguresSelector = store => store.figures;
 
-export const getFigures = createSelector(
+export const getFiguresTable = createSelector(
   getFiguresSelector,
   figures => figures.reduce((a,c) => {
     c.race.forEach(race => {
