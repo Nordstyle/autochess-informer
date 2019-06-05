@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { withStyles, withWidth } from '@material-ui/core';
 import { Drawer } from '@material-ui/core';
 import { Sidebar, Topbar, Footer } from './components';
+import Wrapper from '../../Wrapper';
 import styles from './styles';
 
 class Dashboard extends Component {
@@ -60,7 +61,10 @@ class Dashboard extends Component {
             [classes.contentShift]: shiftContent
           })}
         >
-          {children}
+          <Wrapper>
+            {children}
+          </Wrapper>
+
           <Footer />
         </main>
       </Fragment>

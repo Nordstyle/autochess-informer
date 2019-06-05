@@ -32,10 +32,6 @@ const TooltipWrapp = (props) => {
         }
       }
     }}
-     // open={() => true}
-     // disableFocusListener
-     // disableHoverListener
-     // disableTouchListener
     interactive
     >
       <div className={classes.tooltipWrap}> 

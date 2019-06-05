@@ -11,9 +11,7 @@ class Index extends React.Component {
     const { figures, races, classes } = this.props;
     return (
       <AppLayout title='AutoChess Informer'>
-        <Wrapper>
-          <Table figures={figures} races={races} classesFigures={classes}/>
-        </Wrapper>
+        <Table figures={figures} races={races} classesFigures={classes}/>
       </AppLayout>
     );
   }

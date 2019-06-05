@@ -36,7 +36,7 @@ class Sidebar extends Component {
     return (
       <nav className={rootClassName}>
         <div className={classes.logoWrapper}>
-          <Link
+          <Link prefetch
             href="/"
           >
             <img
