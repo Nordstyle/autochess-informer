@@ -47,13 +47,15 @@ export default {
     color: palette.text.primary,
     fontSize: '16px',
     letterSpacing: '-0.05px',
-    lineHeight: '25px'
+    lineHeight: '25px',
+    fontWeight: '500'
   },
   subtitle2: {
     color: palette.text.primary,
     fontSize: '14px',
     letterSpacing: 0,
-    lineHeight: '16px'
+    lineHeight: '16px',
+    fontWeight: '500'
   },
   body1: {
     color: palette.text.primary,
