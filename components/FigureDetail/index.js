@@ -71,12 +71,12 @@ const FigureDetail = (props) => {
           </Grid>
           <Typography variant='body2' style={{color: 'white'}}>Species: {arrLvlSeparate(race.map(rName => capitalize(rName)))} </Typography>
           <Typography variant='body2' style={{color: 'white'}}>Class: {capitalize(props.figure.class)} </Typography>
-          <Typography variant='body2' style={{color: 'white'}}>Healh: {arrLvlSeparate(health)} </Typography>
+          <Typography variant='body2' style={{color: 'white'}}>Health: {arrLvlSeparate(health)} </Typography>
           <Typography variant='body2' style={{color: 'white'}}>Armor: {arrLvlSeparate(armor)} </Typography>
           <Typography variant='body2' style={{color: 'white'}}>Magical Resistance: {arrLvlSeparate(mr)} </Typography>
           <Typography variant='body2' style={{color: 'white'}}>Attack Damage: {arrLvlSeparate(damage)} </Typography>
           { dps && (
-            <Typography variant='body2' style={{color: 'white'}}>DPS: {arrLvlSeparate(damage)} </Typography>
+            <Typography variant='body2' style={{color: 'white'}}>DPS: {arrLvlSeparate(dps)} </Typography>
           )}
           <Typography variant='body2' style={{color: 'white'}}>Base Attack Time: {as} </Typography>
         </Grid>
