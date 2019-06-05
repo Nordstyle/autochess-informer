@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getFigures, getRaces, getClasses } from '../src/store/selectors';
+import { getFiguresTable, getRaces, getClasses } from '../src/store/selectors';
 
 import { App as AppLayout } from '../components/layouts';
-import Wrapper from '../components/Wrapper';
 import Table from '../components/Table';
 
 class Index extends React.Component {
@@ -17,4 +16,8 @@ class Index extends React.Component {
   }
 }
 
-export default connect(store => ({ figures: getFigures(store), races: getRaces(store), classes: getClasses(store) }))(Index);
+export default connect(store => ({
+  figures: getFiguresTable(store),
+  races: getRaces(store),
+  classes: getClasses(store)
+}))(Index);
