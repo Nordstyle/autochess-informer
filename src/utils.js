@@ -22,3 +22,16 @@ export const matchRaces = (heroRaces, allRaces) => {
   });
   return raceArr;
 };
+
+export const getFigureByName = (figures, name) => figures.find(figure => figure.name === name);
+
+export const matchFiguresByRace = (figures, races) => {
+  return figures.reduce((a,c) => {
+    races.forEach(race => {
+      const cRace = race || 'unknown';
+      if (!a[cRace]) a[cRace] = [];
+      if (c.race.find(item => item === race)) a[cRace].push(c);
+    });
+    return a;
+  }, {});
+};
