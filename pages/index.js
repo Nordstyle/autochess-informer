@@ -9,7 +9,7 @@ class Index extends React.Component {
   render() {
     const { figures, races, classes } = this.props;
     return (
-      <AppLayout title='AutoChess Informer'>
+      <AppLayout title='Figure Table'>
         <Table figures={figures} races={races} classesFigures={classes}/>
       </AppLayout>
     );
