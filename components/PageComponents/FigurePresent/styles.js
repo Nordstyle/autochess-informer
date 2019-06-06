@@ -1,14 +1,16 @@
 export const styles = theme => ({
   root: {
     flexGrow: 1,
-    paddingTop: '44px'
+    paddingTop: '44px',
+    height: '100%'
   },
   paper: {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
     padding: '10px',
-    backgroundColor: 'rgba(255,255,255,0.4)'
+    backgroundColor: 'rgba(255,255,255,0.4)',
+    height: '100%'
   },
   grid: {
     alignItems: 'center',

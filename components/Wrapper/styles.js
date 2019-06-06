@@ -6,6 +6,6 @@ export const styles = theme => ({
     backgroundPosition: 'left center, right center',
     backgroundRepeat: 'no-repeat, no-repeat',
     justifyContent: 'center',
-    height: 'calc(100vh - 192px)'
+    minHeight: 'calc(100vh - 192px)'
   },
 });
