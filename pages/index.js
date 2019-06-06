@@ -10,7 +10,7 @@ class Index extends React.Component {
     const { figures, races, classes } = this.props;
     return (
       <AppLayout title='Table of Figures'>
-        <Table figures={figures} races={races} classesFigures={classes}/>
+        <Table figures={figures} races={races} classesfigures={classes}/>
       </AppLayout>
     );
   }

@@ -11,10 +11,10 @@ import { styles } from './styles';
 const arrLvlSeparate = (arr) => arr.join(' / ');
 
 const FigureDetail = (props) => {
-  const { classes, races, classesFigures } = props;
+  const { classes, races, classesfigures } = props;
   const { name, avatar, race, cost, health, damage, as, dps, armor, mr, skill } = props.figure;
   const matchedRaces = matchRaces(race, races);
-  const classFigure = classesFigures.find(cFigure => cFigure.name === props.figure.class);
+  const classFigure = classesfigures.find(cFigure => cFigure.name === props.figure.class);
   return (
     <Grid item xs={12} className={classes.figureBlock}>
       <Grid item className={classes.figureBlock}>
