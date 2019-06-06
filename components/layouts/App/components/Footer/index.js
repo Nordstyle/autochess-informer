@@ -33,7 +33,7 @@ class Footer extends Component {
           &copy; AutoChess Informer {(new Date()).getFullYear()}
         </Typography>
         <Typography variant="caption">
-          На нашем ресурсе вы можете найти большое количество полезного материала, растите вместе с нами!
+          Last updated =Date=
         </Typography>
       </div>
     );

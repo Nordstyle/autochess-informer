@@ -23,7 +23,7 @@ const FigurePresent = (props) => {
         <Grid container className={classes.grid}>
           <Grid container className={classes.heading}>
             <Grid container className={classes.name}>
-              <img src={avatar} className={classes.avatar} alt={'Figure Dota AutoChess avatar ' + name} />
+              <img src={avatar} className={classes.avatar} alt={'Figure Dota Auto Chess avatar ' + name} />
               <Typography variant='h4'
                           style={{ color: takeRareColor(figure.cost)}}>
 
@@ -36,7 +36,7 @@ const FigurePresent = (props) => {
 
                 Cost: {cost}
               </Typography>
-              <img src={icon} className={classes.icon} alt={'Figure Dota AutoChess icon ' + name} />
+              <img src={icon} className={classes.icon} alt={'Figure Dota Auto Chess icon ' + name} />
             </Grid>
           </Grid>
           <Grid container>
@@ -127,7 +127,7 @@ const FigurePresent = (props) => {
                 <TableBody>
                   <TableRow className={classes.row}>
                     <TableCell className={classes.td} align="left">
-                      <img src={skill.icon} className={classes.skill} alt={'Dota AutoChess skill ' + skill.name}/>
+                      <img src={skill.icon} className={classes.skill} alt={'Dota Auto Chess skill ' + skill.name}/>
                     </TableCell>
                     <TableCell className={classes.td} align="left">
                       <Typography variant='subtitle1'>{skill.name}</Typography>
@@ -159,7 +159,7 @@ const FigurePresent = (props) => {
                       </Typography>
                     </TableCell>
                     <TableCell className={classes.td} align="left">
-                      <img src={race.icon} className={classes.skill} alt={'Dota AutoChess Species image' + race.name}/>
+                      <img src={race.icon} className={classes.skill} alt={'Dota Auto Chess Species image' + race.name}/>
                     </TableCell>
                   </TableRow>
                 </TableBody>

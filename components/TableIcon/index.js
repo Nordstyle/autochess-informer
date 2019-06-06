@@ -14,7 +14,7 @@ const TableIcon = (props) => {
     <Link as={`/figure/${name}`} href={`/figure?name=${name}`}>
       <TooltipWrapp figure={props.figure} races={races} TooltipContent={FigureDetail} classesFigures={classesFigures}>
       <span className={classes.imgWrapper} style={{ backgroundColor: takeRareColor(cost) }}>
-        <img src={icon} alt={'Hero Dota AutoChess ' + name} />
+        <img src={icon} alt={'Hero Dota Auto Chess ' + name} />
       </span>
       </TooltipWrapp>
     </Link>

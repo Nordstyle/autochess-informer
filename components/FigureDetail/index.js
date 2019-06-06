@@ -33,7 +33,7 @@ const FigureDetail = (props) => {
                   </Typography>
                 </>
               }>
-                <img src={race.icon} className={classes.supImages} alt={'Dota AutoChess Species ' + race.name}/>
+                <img src={race.icon} className={classes.supImages} alt={'Dota Auto Chess Species ' + race.name}/>
               </Tooltip>
             ))}
             {classFigure && (
@@ -48,7 +48,7 @@ const FigureDetail = (props) => {
                   </Typography>
                 </>
               }>
-                <img src={classFigure.icon} className={classes.supImages} alt={'Dota AutoChess Classes ' + classFigure.name}/>
+                <img src={classFigure.icon} className={classes.supImages} alt={'Dota Auto Chess Classes ' + classFigure.name}/>
               </Tooltip>
             )}
           </Grid>
@@ -65,7 +65,7 @@ const FigureDetail = (props) => {
                   </Typography>
                 </>
               }>
-                <img src={skill.icon} className={classes.skill} alt={'Dota AutoChess skill ' + classes.skill.name}/>
+                <img src={skill.icon} className={classes.skill} alt={'Dota Auto Chess skill ' + classes.skill.name}/>
               </Tooltip>
             )}
           </Grid>
