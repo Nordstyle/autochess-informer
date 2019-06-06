@@ -15,7 +15,7 @@ const Page = withRouter(props => {
   const matchedRaces = matchRaces(figure.race, races);
   const matchedFiguresByRace = matchFiguresByRace(figures, figure.race);
   return (
-    <AppLayout>
+    <AppLayout title="Figure">
       <FigurePresent figure={figure} races={matchedRaces} restFigures={matchedFiguresByRace}/>
     </AppLayout>
   )
