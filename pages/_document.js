@@ -5,7 +5,7 @@ import flush from 'styled-jsx/server';
 
 class MyDocument extends Document {
   render() {
-    const { pageContext, title = 'AutoChess Informer' } = this.props;
+    const { pageContext, title = 'Dota Auto Chess Informer' } = this.props;
     return (
       <Html lang="ru" dir="ltr">
         <Head>
