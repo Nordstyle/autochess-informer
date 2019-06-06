@@ -71,7 +71,7 @@ export default theme => ({
       color: theme.palette.text.primary
     },
     '& $listItemIcon': {
-      color: theme.palette.primary.main,
+      color: theme.palette.secondary.main,
       marginLeft: '-4px'
     }
   },
