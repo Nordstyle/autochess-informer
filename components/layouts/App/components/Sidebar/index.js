@@ -126,7 +126,6 @@ const Sidebar = withRouter((props) => {
           />
         </ListItem>
         <ListItem
-          activeClassName={classes.activeListItem}
           className={classes.listItem}
           component='a'
           selected={router.pathname === '/strategies'}
