@@ -165,23 +165,23 @@ const FigurePresent = (props) => {
                 </TableBody>
               </Table>
             ))}
-            <div>
-              { Object.keys(restFigures).map(raceItem => {
-                return (
-                <div key={raceItem}>
-                  <Typography variant='subtitle1' className={classes.bold}>List of {capitalize(raceItem)+'s'}</Typography>
-                  {
-                    restFigures[raceItem].map(figure => figure.name !== name && (
-                      <Link key={figure.name} as={`/figure/${figure.name}`} href={`/figure?name=${figure.name}`}>
-                        <Typography style={{ color: takeRareColor(figure.cost), cursor: 'pointer'}} variant='body2'>
-                          {figure.name}
-                        </Typography>
-                      </Link>
-                    ))
-                  }
-                </div>
-              )})}
-            </div>
+            {/*<div>*/}
+              {/*{ Object.keys(restFigures).map(raceItem => {*/}
+                {/*return (*/}
+                {/*<div key={raceItem}>*/}
+                  {/*<Typography variant='subtitle1' className={classes.bold}>List of {capitalize(raceItem)+'s'}</Typography>*/}
+                  {/*{*/}
+                    {/*restFigures[raceItem].map(figure => figure.name !== name && (*/}
+                      {/*<Link key={figure.name} as={`/figure/${figure.name}`} href={`/figure?name=${figure.name}`}>*/}
+                        {/*<Typography style={{ color: takeRareColor(figure.cost), cursor: 'pointer'}} variant='body2'>*/}
+                          {/*{figure.name}*/}
+                        {/*</Typography>*/}
+                      {/*</Link>*/}
+                    {/*))*/}
+                  {/*}*/}
+                {/*</div>*/}
+              {/*)})}*/}
+            {/*</div>*/}
           </Grid>
         </Grid>
       </Paper>
