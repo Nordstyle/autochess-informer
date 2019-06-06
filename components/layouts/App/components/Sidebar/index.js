@@ -72,7 +72,6 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          activeClassName={classes.activeListItem}
           selected={router.pathname === '/'}
           onClick={() => Router.push('/')}
         >
@@ -87,7 +86,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/all-figures'}
+          onClick={() => Router.push('/all-figures')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <PeopleIcon />
@@ -100,7 +100,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/species'}
+          onClick={() => Router.push('/species')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <PetsOutlined />
@@ -113,7 +114,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/classes'}
+          onClick={() => Router.push('/classes')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <PersonPinSharp />
@@ -127,7 +129,8 @@ const Sidebar = withRouter((props) => {
           activeClassName={classes.activeListItem}
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/strategies'}
+          onClick={() => Router.push('/strategies')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <LiveHelpRounded />
@@ -140,7 +143,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/items'}
+          onClick={() => Router.push('/items')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <GiftIcon />
@@ -153,7 +157,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/basics'}
+          onClick={() => Router.push('/basics')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <SettingsIcon />
@@ -177,7 +182,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component="a"
-          onClick={() => Router.push('/')}
+          selected={router.pathname === '/information'}
+          onClick={() => Router.push('/information')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <InfoIcon />
