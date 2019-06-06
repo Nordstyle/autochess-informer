@@ -7,8 +7,8 @@ export const races = [
     effect: {
       name: 'Power of the Wild',
       description: `Active when you have at least (N) different beast pieces on board %
-      (2) Beasts: All allies have +10% attack damage, including summoned units %
-      (4) Beasts: All allies have +20% attack damage, including summoned units %`
+      (2) Beasts: All allies have +10&#37; attack damage, including summoned units %
+      (4) Beasts: All allies have +20&#37; attack damage, including summoned units %`
     }
   },
   {
@@ -19,7 +19,7 @@ export const races = [
     effect: {
       name: 'Fel Power',
       description: `Active when you control only one demon on the chessboard. %
-      Deal 50% extra pure damage to the target.`
+      Deal 50&#37; extra pure damage to the target.`
     }
   },
   {
@@ -51,8 +51,8 @@ export const races = [
     effect: {
       name: 'Elemental Essence',
       description: `Active when there are at least (N) different elemental chess pieces on the chessboard. % 
-      (2) Elementals: All friendly elementals have 30% chance to turn the attacker into stone for 4s when attacked by melee chesses. %
-      (4) Elementals: All friendly chesses have 30% chance to turn the attacker into stone for 4s when attacked by melee chesses.`
+      (2) Elementals: All friendly elementals have 30&#37; chance to turn the attacker into stone for 4s when attacked by melee chesses. %
+      (4) Elementals: All friendly chesses have 30&#37; chance to turn the attacker into stone for 4s when attacked by melee chesses.`
     }
   },
   {
@@ -63,9 +63,9 @@ export const races = [
     effect: {
       name: 'Evasion',
       description: `Active when you have at least (N) different elf pieces on board. %
-      (3) Elfs: All friendly elves have +20% evasion.%
-      (6) Elfs: All friendly elves have additional +25% evasion.%
-      (9) Elfs: All friendly elves have additional +30% evasion. `
+      (3) Elfs: All friendly elves have +20&#37; evasion.%
+      (6) Elfs: All friendly elves have additional +25&#37; evasion.%
+      (9) Elfs: All friendly elves have additional +30&#37; evasion. `
     }
   },
   {
@@ -88,9 +88,9 @@ export const races = [
     effect: {
       name: 'Silencer',
       description: `Active when there are at least (N) different human chess pieces on the chessboard. %
-      (2) Humans: All friendly humans have 20% chance to silence target for 4s when attacking. %
-      (4) Humans: All friendly humans have 25% chance to silence target for 4s when attacking. %
-      (6) Humans: All friendly humans have 30% chance to silence target for 4s when attacking.`
+      (2) Humans: All friendly humans have 20&#37; chance to silence target for 4s when attacking. %
+      (4) Humans: All friendly humans have 25&#37; chance to silence target for 4s when attacking. %
+      (6) Humans: All friendly humans have 30&#37; chance to silence target for 4s when attacking.`
     }
   },
   {
@@ -100,7 +100,7 @@ export const races = [
     icon: '/static/images/race/ogr.png',
     effect: {
       name: 'Two Heads',
-      description: `+5% max HP for all allies.`
+      description: `+5 &#37; max HP for all allies.`
     }
   },
   {
@@ -123,7 +123,7 @@ export const races = [
     effect: {
       name: 'Scale Armor',
       description: `Active when you have at least (N) different naga pieces on board. %
-      (2) Nagas: All allies have +35% magic resistance.`
+      (2) Nagas: All allies have +35&#37; magic resistance.`
     }
   },
   {
@@ -159,8 +159,8 @@ export const races = [
       name: 'Overwhelming Superiority',
       description: `Active when you have at least (N) different god pieces on board. %
       Active when all other species traits are inactive. %
-      (1) God: All allies cooldown gets reduced by 50%. %
-      (2) God: All allies cooldown gets reduced by 50%.`
+      (1) God: All allies cooldown gets reduced by 50&#37;. %
+      (2) God: All allies cooldown gets reduced by 50&#37;.`
     }
   }
 ];
