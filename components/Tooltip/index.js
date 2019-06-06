@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
+import FigureDetail from '../FigureDetail';
 
 import { styles } from './styles';
 
 const TooltipWrapp = (props) => {
   const [arrowRef, handleArrowRef] = useState(null);
-  const { classes, tooltipContent, figure, races, classesfigures } = props;
-  const TooltipContent = tooltipContent;
+  const { classes, figure, races, classesfigures } = props;
   return (
     <Tooltip {...props} title={
       <>
-        <TooltipContent figure={figure} races={races} classesfigures={classesfigures}/>
+        <FigureDetail figure={figure} races={races} classesfigures={classesfigures}/>
         <span className={classes.arrow} ref={handleArrowRef}/>
       </>
     }
