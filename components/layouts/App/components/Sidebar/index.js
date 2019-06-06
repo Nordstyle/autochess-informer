@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import Router from 'next/router';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 import Link from 'next/link';
 
 import {
-  Avatar,
   Divider,
   List,
   ListItem,
@@ -17,22 +17,19 @@ import {
 import {
   DashboardOutlined as DashboardIcon,
   PeopleOutlined as PeopleIcon,
-  ShoppingBasketOutlined as ShoppingBasketIcon,
-  LockOpenOutlined as LockOpenIcon,
-  TextFields as TextFieldsIcon,
-  ImageOutlined as ImageIcon,
   InfoOutlined as InfoIcon,
-  AccountBoxOutlined as AccountBoxIcon,
-  SettingsOutlined as SettingsIcon
+  SettingsOutlined as SettingsIcon,
+  PersonPinSharp,
+  PetsOutlined,
+  LiveHelpRounded,
+  CardGiftcard as GiftIcon
 } from '@material-ui/icons';
 import styles from './styles';
 
 class Sidebar extends Component {
   render() {
     const { classes, className } = this.props;
-
     const rootClassName = classNames(classes.root, className);
-
     return (
       <nav className={rootClassName}>
         <div className={classes.logoWrapper}>
@@ -47,171 +44,150 @@ class Sidebar extends Component {
           </Link>
         </div>
         <Divider className={classes.logoDivider} />
+        <div className={classes.profile}>
+          <Link href="/">
+            <img
+              alt="Dota Auto Chess Informer battlefury"
+              className={classes.avatar}
+              src="/static/images/index/Legendary.png"
+            />
+          </Link>
+          <Typography
+            className={classes.nameText}
+            variant="h6"
+          >
+            Dota Auto Chess
+          </Typography>
+          <Typography
+            className={classes.bioText}
+            variant="caption"
+          >
+            Informer
+          </Typography>
+        </div>
+        <Divider className={classes.profileDivider} />
 
-        {/*<div className={classes.profile}>*/}
-          {/*<Link to="/account">*/}
-            {/*<Avatar*/}
-              {/*alt="Roman Kutepov"*/}
-              {/*className={classes.avatar}*/}
-              {/*src="/images/avatars/avatar_1.png"*/}
-            {/*/>*/}
-          {/*</Link>*/}
-          {/*<Typography*/}
-            {/*className={classes.nameText}*/}
-            {/*variant="h6"*/}
-          {/*>*/}
-            {/*Roman Kutepov*/}
-          {/*</Typography>*/}
-          {/*<Typography*/}
-            {/*className={classes.bioText}*/}
-            {/*variant="caption"*/}
-          {/*>*/}
-            {/*Brain Director*/}
-          {/*</Typography>*/}
-        {/*</div>*/}
-        {/*<Divider className={classes.profileDivider} />*/}
-        {/*<List*/}
-          {/*component="div"*/}
-          {/*disablePadding*/}
-        {/*>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/dashboard"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<DashboardIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Dashboard"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/users"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<PeopleIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Users"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/products"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<ShoppingBasketIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Products"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/sign-in"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<LockOpenIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Authentication"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/typography"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<TextFieldsIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Typography"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/icons"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<ImageIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Icons and Images"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/account"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<AccountBoxIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Account"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-          {/*<ListItem*/}
-            {/*activeClassName={classes.activeListItem}*/}
-            {/*className={classes.listItem}*/}
-            {/*component={NavLink}*/}
-            {/*to="/settings"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<SettingsIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Settings"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-        {/*</List>*/}
-        {/*<Divider className={classes.listDivider} />*/}
-        {/*<List*/}
-          {/*component="div"*/}
-          {/*disablePadding*/}
-          {/*subheader={*/}
-            {/*<ListSubheader className={classes.listSubheader}>*/}
-              {/*Support*/}
-            {/*</ListSubheader>*/}
-          {/*}*/}
-        {/*>*/}
-          {/*<ListItem*/}
-            {/*className={classes.listItem}*/}
-            {/*component="a"*/}
-            {/*href="https://devias.io/contact-us"*/}
-            {/*target="_blank"*/}
-          {/*>*/}
-            {/*<ListItemIcon className={classes.listItemIcon}>*/}
-              {/*<InfoIcon />*/}
-            {/*</ListItemIcon>*/}
-            {/*<ListItemText*/}
-              {/*classes={{ primary: classes.listItemText }}*/}
-              {/*primary="Customer support"*/}
-            {/*/>*/}
-          {/*</ListItem>*/}
-        {/*</List>*/}
+        <List
+          component="div"
+          disablePadding
+        >
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Table of Figures"
+            />
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="All Figures"
+            />
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <PetsOutlined />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Species"
+            />
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <PersonPinSharp />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Classes"
+            />
+          </ListItem>
+          <ListItem
+            activeClassName={classes.activeListItem}
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <LiveHelpRounded />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Strategies"
+            />
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <GiftIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Items"
+            />
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
+            component='a'
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <SettingsIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Basics"
+            />
+          </ListItem>
+        </List>
+        <Divider className={classes.listDivider} />
+        <List
+          component="div"
+          disablePadding
+          subheader={
+            <ListSubheader className={classes.listSubheader}>
+              Support
+            </ListSubheader>
+          }
+        >
+          <ListItem
+            className={classes.listItem}
+            component="a"
+            onClick={() => Router.push('/')}
+          >
+            <ListItemIcon className={classes.listItemIcon}>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText
+              classes={{ primary: classes.listItemText }}
+              primary="Information"
+            />
+          </ListItem>
+        </List>
       </nav>
     );
   }

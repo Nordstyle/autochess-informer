@@ -31,11 +31,14 @@ export default theme => ({
     minHeight: 'fit-content'
   },
   avatar: {
-    width: '100px',
-    height: '100px'
+    width: '120px',
+    height: '120px',
+    textAlign: 'center',
+    objectFit: 'contain',
+    cursor: 'pointer'
   },
   nameText: {
-    marginTop: theme.spacing.unit * 2
+    marginTop: theme.spacing.unit * -1
   },
   bioText: {},
   profileDivider: {
@@ -48,11 +51,11 @@ export default theme => ({
   listItem: {
     cursor: 'pointer',
     '&:hover': {
-      backgroundColor: theme.palette.primary.light,
-      borderLeft: `4px solid ${theme.palette.primary.main}`,
+      backgroundColor: theme.palette.secondary.light,
+      borderLeft: `4px solid ${theme.palette.secondary.main}`,
       borderRadius: '4px',
       '& $listItemIcon': {
-        color: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
         marginLeft: '-4px'
       }
     },
@@ -61,9 +64,9 @@ export default theme => ({
     }
   },
   activeListItem: {
-    borderLeft: `4px solid ${theme.palette.primary.main}`,
+    borderLeft: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: '4px',
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.secondary.light,
     '& $listItemText': {
       color: theme.palette.text.primary
     },
