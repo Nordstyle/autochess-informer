@@ -15,7 +15,6 @@ const CommonTable = (props) => {
   const { classes, elements, figures, isClasses } = props;
   const allElements = elements.map(item => item.name);
   const matchedFiguresByRace = matchFiguresByMark(figures, allElements, isClasses);
-  console.log(props)
   return (
     <div className={classes.root}>
       <Table className={classes.tableRoot}>
