@@ -7,8 +7,8 @@ export const classes = [
     effect: {
       name: 'Coup de Grace',
       description: `Active when you have at least (N) different assassin pieces on board.
-      (3) Assassins: All friendly assassins have 15% chance to critical hit for 350% damage.%
-      (6) Assassins: All friendly assassins have 15% chance to critical hit for 450% damage.%`
+      (3) Assassins: All friendly assassins have 15&#37; chance to critical hit for 350&#37; damage.%
+      (6) Assassins: All friendly assassins have 15&#37; chance to critical hit for 450&#37; damage.%`
     }
   },
   {
@@ -43,9 +43,9 @@ export const classes = [
     effect: {
       name: 'Divine Protection',
       description: `Active when you have at least (N) different knight pieces on board. %
-      Shield gives 80% magic resistance and 35 armor for 3 seconds %
-      (3) Knights: All friendly knights have 40% chance to proc a damage-reducing shield. %
-      (6) Knights: All allies have 40% chance to proc a damage-reducing shield.`
+      Shield gives 80&#37; magic resistance and 35 armor for 3 seconds %
+      (3) Knights: All friendly knights have 40&#37; chance to proc a damage-reducing shield. %
+      (6) Knights: All allies have 40&#37; chance to proc a damage-reducing shield.`
     }
   },
   {
@@ -56,8 +56,8 @@ export const classes = [
     effect: {
       name: 'Aimed Shot',
       description: `Active when you have at least (N) different hunter pieces on board. %
-      (3) Hunters: All friendly hunters have +30 base attack damage and +30% chance to pierce through evasion. %
-      (6) Hunters: All friendly hunters have an additional +40 base attack damage and +40% chance to pierce through evasion.`
+      (3) Hunters: All friendly hunters have +30 base attack damage and +30&#37; chance to pierce through evasion. %
+      (6) Hunters: All friendly hunters have an additional +40 base attack damage and +40&#37; chance to pierce through evasion.`
     }
   },
   {
@@ -68,7 +68,7 @@ export const classes = [
     effect: {
       name: 'Barrier',
       description: `Active when you have at least (N) different priest pieces on board. %
-      (1) Priest: Reduce damage to your courier by 20%.`
+      (1) Priest: Reduce damage to your courier by 20&#37;.`
     }
   },
   {
@@ -79,8 +79,8 @@ export const classes = [
     effect: {
       name: 'Magic Vulnerability',
       description: `Active when you have at least (N) different mage pieces on board. %
-      (3) Mages: All enemies have their magic resistance reduced by 35%. %
-      (6) Mages: All enemies have their magic resistance reduced by an additional 45%.`
+      (3) Mages: All enemies have their magic resistance reduced by 35&#37;. %
+      (6) Mages: All enemies have their magic resistance reduced by an additional 45&#37;.`
     }
   },
   {
@@ -114,8 +114,8 @@ export const classes = [
     effect: {
       name: 'Siphon Soul',
       description: `Active when you have at least (N) different warlock pieces on board. %
-      (3) Warlocks: All allies have +15% lifesteal and spell lifesteal. %
-      (6) Warlocks: All allies have an additional +25% lifesteal and spell lifesteal.`
+      (3) Warlocks: All allies have +15&#37; lifesteal and spell lifesteal. %
+      (6) Warlocks: All allies have an additional +25&#37; lifesteal and spell lifesteal.`
     }
   },
   {
