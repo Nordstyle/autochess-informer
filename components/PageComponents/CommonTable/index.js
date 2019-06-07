@@ -7,14 +7,15 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
-import {capitalize, matchFiguresByRace, takeRareColor} from "../../../src/utils";
+import {capitalize, matchFiguresByMark, takeRareColor} from "../../../src/utils";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
-const Species = (props) => {
-  const { classes, species, figures } = props;
-  const allSpecies = species.map(item => item.name);
-  const matchedFiguresByRace = matchFiguresByRace(figures, allSpecies);
+const CommonTable = (props) => {
+  const { classes, elements, figures, isClasses } = props;
+  const allElements = elements.map(item => item.name);
+  const matchedFiguresByRace = matchFiguresByMark(figures, allElements, isClasses);
+  console.log(props)
   return (
     <div className={classes.root}>
       <Table className={classes.tableRoot}>
@@ -43,26 +44,26 @@ const Species = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {species.map(spec => (
-            <TableRow key={spec.id}>
+          {elements.map(element => (
+            <TableRow key={element.id}>
               <TableCell className={classes.tableCell} style={{textAlign:'center'}}>
-                <Typography className={classes.name} variant='subtitle2'>{capitalize(spec.name) + 's'}</Typography>
-                <img src={spec.icon} className={classes.icon} alt={'Dota Auto Chess Species ' + species.name} />
+                <Typography className={classes.name} variant='subtitle2'>{capitalize(element.name) + 's'}</Typography>
+                <img src={element.icon} className={classes.icon} alt={ isClasses ? 'Dota Auto Chess Classes ' + element.name : 'Dota Auto Chess Species ' + element.name } />
               </TableCell>
               <TableCell className={classNames(classes.cellDescription, classes.tableCell)}>
                 <Typography variant='body2'>
-                  {spec.description}
+                  {element.description}
                 </Typography>
               </TableCell>
               <TableCell className={classes.tableCell}>
                 <Typography variant='subtitle2'>
-                  {spec.effect.name}
+                  {element.effect.name}
                 </Typography>
-                <Typography variant='body2' dangerouslySetInnerHTML={{ __html: spec.effect.description.replace(/\%/g, '<br/>') }} />
+                <Typography variant='body2' dangerouslySetInnerHTML={{ __html: element.effect.description.replace(/\%/g, '<br/>') }} />
               </TableCell>
               <TableCell className={classes.tableCell}>
-                {matchedFiguresByRace[spec.name].map(figure => (
-                  <Link key={figure.name} as={`/figure/${figure.name}`} href={`/figure?name=${figure.name}`}>
+                {matchedFiguresByRace[element.name].map(figure => (
+                  <Link key={figure.name} href={`/figure/${figure.name}`}>
                     <Typography style={{ color: takeRareColor(figure.cost), cursor: 'pointer', width: '150px'}} variant='body2'>
                       {figure.name}
                     </Typography>
@@ -77,4 +78,4 @@ const Species = (props) => {
   )
 };
 
-export default withStyles(styles)(Species);
+export default withStyles(styles)(CommonTable);
