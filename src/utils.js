@@ -25,12 +25,16 @@ export const matchRaces = (heroRaces, allRaces) => {
 
 export const getFigureByName = (figures, name) => figures.find(figure => figure.name === name);
 
-export const matchFiguresByRace = (figures, races) => {
+export const matchFiguresByMark = (figures, elements, isClasses) => {
   return figures.reduce((a,c) => {
-    races.forEach(race => {
-      const cRace = race || 'unknown';
-      if (!a[cRace]) a[cRace] = [];
-      if (c.race.find(item => item === race)) a[cRace].push(c);
+    elements.forEach(element => {
+      const cElem = element || 'unknown';
+      if (!a[cElem]) a[cElem] = [];
+      if (isClasses) {
+        if (c.class === element) a[cElem].push(c);
+      } else {
+        if (c.race.find(item => item === element)) a[cElem].push(c);
+      }
     });
     return a;
   }, {});

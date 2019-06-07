@@ -5,7 +5,7 @@ import { App as AppLayout } from '../components/layouts';
 
 import FigurePresent from "../components/PageComponents/FigurePresent";
 import {getFiguresSelector, getRaces} from "../src/store/selectors";
-import {getFigureByName, matchFiguresByRace, matchRaces} from "../src/utils";
+import {getFigureByName, matchFiguresByMark, matchRaces} from "../src/utils";
 
 
 const Page = withRouter(props => {
@@ -13,7 +13,7 @@ const Page = withRouter(props => {
   const { figures, races } = props;
   const figure = getFigureByName(figures, name);
   const matchedRaces = matchRaces(figure.race, races);
-  const matchedFiguresByRace = matchFiguresByRace(figures, figure.race);
+  const matchedFiguresByRace = matchFiguresByMark(figures, figure.race);
   return (
     <AppLayout title="Figure">
       <FigurePresent figure={figure} races={matchedRaces} restFigures={matchedFiguresByRace}/>
