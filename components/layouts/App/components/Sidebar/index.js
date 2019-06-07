@@ -86,8 +86,8 @@ const Sidebar = withRouter((props) => {
         <ListItem
           className={classes.listItem}
           component='a'
-          selected={router.pathname === '/all-figures'}
-          onClick={() => Router.push('/all-figures')}
+          selected={router.pathname === '/figures'}
+          onClick={() => Router.push('/figures')}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <PeopleIcon />

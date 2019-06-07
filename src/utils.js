@@ -1,3 +1,5 @@
+const sortByCost = (a, b) => a.cost - b.cost;
+
 export const takeRareColor = (cost) => {
   switch(cost) {
     case 1: return '#B2B2B2';
@@ -38,4 +40,14 @@ export const matchFiguresByMark = (figures, elements, isClasses) => {
     });
     return a;
   }, {});
+};
+
+export const getSortedFigures = (figures, species, figureClasses) => {
+  const allRaces = species.map(spec => spec.name);
+  const allClasses = figureClasses.map(fClass => fClass.name);
+  return {
+    cost: figures.sort((a,b) => sortByCost(a, b)),
+    race: matchFiguresByMark(figures, allRaces, false),
+    species: matchFiguresByMark(figures, allClasses, true),
+  };
 };
